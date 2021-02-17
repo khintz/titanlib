@@ -1,5 +1,6 @@
 find_package(PythonLibs REQUIRED)
 include_directories(${PYTHON_INCLUDE_PATH})
+include_directories(/usr/lib64/python3.6/site-packages/numpy/core/include)
 
 # Files to install with Python
 file(GLOB CPP_SOURCE_FILES ${CMAKE_SOURCE_DIR}/src/*.cpp ${CMAKE_SOURCE_DIR}/src/*.c)

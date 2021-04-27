@@ -1,5 +1,5 @@
 Name: SMHI-titan-lib
-Version: 0.2
+Version: 0.3
 Release: 0
 Summary: Library of automatic quality control routines for weather observations
 License: SMHI/MetNo

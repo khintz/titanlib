@@ -59,5 +59,7 @@ rm -rf $RPM_SOURCE_DIR
 %attr(644,root,root) %{INSTALLDIR}/*.py
 
 %changelog
+* Thu Apr 29 2021 Aliaksandr Rahachou <aliaksandr.rahachou@hiq.se> - 0.3-0
+- TitanLib 0.3.0
 * Wed Feb 02 2021 Aliaksandr Rahachou <aliaksandr.rahachou@hiq.se> - 0.2-0
 - First variant, TitanLib 0.2.0

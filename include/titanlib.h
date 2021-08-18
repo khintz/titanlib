@@ -38,6 +38,16 @@ namespace titanlib {
     static const float pi = 3.14159265;
     /** Radius of the earth [m] */
     static const double radius_earth = 6.378137e6;
+    /** Constant Lapse Rate moist air [K/m] */
+    static const float lapse_rate=0.0065;
+    /** Temperature at surface in standard atmosphere [K] */
+    static const float standard_surface_temperature = 288.15;
+    /** Gravitational acceleration [m/s^2] */
+    static const float gravit = 9.82;
+    /** Molar Mass of Dry Air [kg/mol] */
+    static const float molar_mass = 0.0289644;
+    /** Universal Gas Constant [kg*m^2*s^-2/(K*mol] */
+    static const float gas_constant = 8.31447;
     /**@}*/
 
     /** Types of coordinates for position of points */
@@ -346,6 +356,9 @@ namespace titanlib {
             return left.first < right.first;
         };
     };
+
+    float pws_slp_to_ps(float slp, float h);
+
     /**@}*/
 
     /** ****************************************

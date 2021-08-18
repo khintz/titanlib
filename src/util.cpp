@@ -304,3 +304,13 @@ float titanlib::find_k_closest(const vec& array, int k) {
     return value;
 }
 
+float titanlib::pws_slp_to_ps(float slp, float h) {
+    // float ps = slp * pow( (1. - L * h / T0), (g * M / (R * L)) );
+    if(slp < 0) {
+        throw std::runtime_error("Input pressure is negative");
+    }
+    float ps = slp * pow( (1. - titanlib::lapse_rate * h / titanlib::standard_surface_temperature), 
+                            (titanlib::gravit * titanlib::molar_mass / 
+                            (titanlib::gas_constant * titanlib::lapse_rate)) );
+    return ps;
+}
